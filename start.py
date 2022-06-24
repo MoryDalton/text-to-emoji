@@ -23,4 +23,4 @@ def check_text():
 
 
 if __name__ == ('__main__'):
-    print(check_text())
+    print(type(check_text()))

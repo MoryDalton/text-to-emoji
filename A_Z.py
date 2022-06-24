@@ -33,22 +33,23 @@ def text_to_emoji(text, elm):
 
     for i in t:
 
-        l.append(all_words.get(i, i))
+        l.append(all_words.get(i))
 
     return show(l)
 
 
 def show(l):
 
-    result = '\n'
+    all_list = []
     for i in range(7):
 
-        s = ''
+        s = []
 
         for j in range(len(l)):
 
-            s += l[j][i]+(5*' ')
+            s.append(l[j][i])
 
-        result += s+'\n'
-
+        all_list.append((5*' ').join(s))
+    result = '\n'.join(all_list)
     return result
+
